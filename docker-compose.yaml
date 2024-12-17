@@ -18,8 +18,8 @@ services:
     command: ['tail', '-f', '/dev/null']
   consulClient01:
     image: consul:1.10
-    container_name: consulServer03
-    hostname: consulServer03
+    container_name: consulClient01
+    hostname: consulClient01
     command: ['tail', '-f', '/dev/null']
     volumes:
-      - ./clients/consult:01:/etc/consul.d
+      - ./clients/consul01:/etc/consul.d
